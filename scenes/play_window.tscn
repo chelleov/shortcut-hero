@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cj7onubn3h8hn"]
+
+[node name="Play Window" type="Control" unique_id=312381409]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 999.0
+offset_bottom = 711.0
