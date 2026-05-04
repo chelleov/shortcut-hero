@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cj7onubn3h8hn"]
 
 [ext_resource type="Script" uid="uid://cp27c26bgpdsg" path="res://scenes/PlayWindow.cs" id="1_gtx0c"]
+[ext_resource type="Script" uid="uid://cgle7r5mq1hx8" path="res://scenes/GameOverProgress.cs" id="2_o4cd0"]
 
 [node name="Play Window" type="Control" unique_id=312381409]
 custom_minimum_size = Vector2(1280, 720)
@@ -10,35 +11,78 @@ offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("1_gtx0c")
 
-[node name="Game Over Countdown" type="Timer" parent="." unique_id=691931224]
-
 [node name="Game Over Progress" type="ProgressBar" parent="." unique_id=1596221303]
 layout_mode = 0
 offset_left = 348.0
 offset_top = 372.0
 offset_right = 896.0
 offset_bottom = 399.0
+script = ExtResource("2_o4cd0")
 
-[node name="Game Title" type="Label" parent="." unique_id=1293406496]
+[node name="Game Over Countdown" type="Timer" parent="Game Over Progress" unique_id=691931224]
+one_shot = true
+
+[node name="Score" type="Label" parent="." unique_id=1293406496]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 130.0
-offset_right = 608.0
-offset_bottom = 153.0
-text = "Title"
+offset_left = 20.0
+offset_top = 52.0
+offset_right = 129.0
+offset_bottom = 75.0
+text = "Score"
+
+[node name="Score Value" type="RichTextLabel" parent="." unique_id=799481454]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 52.0
+offset_right = 359.0
+offset_bottom = 92.0
+text = "1
+"
+
+[node name="Round Number" type="Label" parent="." unique_id=1412909590]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 158.0
+offset_bottom = 33.0
+text = "Round Number"
+
+[node name="Round Number Value" type="RichTextLabel" parent="." unique_id=296535096]
+layout_mode = 0
+offset_left = 158.0
+offset_right = 359.0
+offset_bottom = 40.0
+text = "1"
 
 [node name="Current Shortcut Target" type="Label" parent="." unique_id=278699642]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 187.0
-offset_right = 688.0
-offset_bottom = 210.0
+offset_left = 499.0
+offset_top = 168.0
+offset_right = 694.0
+offset_bottom = 191.0
 text = "Current Needed Shortcut"
+
+[node name="Shortcut Description" type="Label" parent="." unique_id=1450693737]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 223.0
+offset_right = 694.0
+offset_bottom = 246.0
+text = "Shortcut Description"
 
 [node name="User Keys" type="RichTextLabel" parent="." unique_id=888997760]
 layout_mode = 0
 offset_left = 499.0
-offset_top = 260.0
+offset_top = 283.0
 offset_right = 700.0
-offset_bottom = 300.0
+offset_bottom = 323.0
 text = "User Entered Keys"
+
+[node name="Time Add Button" type="Button" parent="." unique_id=617698817]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 168.0
+offset_right = 422.0
+offset_bottom = 272.0
+text = "Test"
+
+[connection signal="pressed" from="Time Add Button" to="Game Over Progress" method="OnTimeAddButtonPressed"]
