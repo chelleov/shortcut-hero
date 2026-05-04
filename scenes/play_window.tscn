@@ -53,6 +53,15 @@ offset_right = 359.0
 offset_bottom = 40.0
 text = "1"
 
+[node name="Current Shortcut Name" type="Label" parent="." unique_id=97853039]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 111.0
+offset_right = 694.0
+offset_bottom = 160.0
+text = "Current Needed Name
+"
+
 [node name="Current Shortcut Target" type="Label" parent="." unique_id=278699642]
 layout_mode = 0
 offset_left = 499.0
@@ -61,7 +70,7 @@ offset_right = 694.0
 offset_bottom = 191.0
 text = "Current Needed Shortcut"
 
-[node name="Shortcut Description" type="Label" parent="." unique_id=1450693737]
+[node name="Current Shortcut Description" type="Label" parent="." unique_id=1450693737]
 layout_mode = 0
 offset_left = 499.0
 offset_top = 223.0
@@ -73,16 +82,7 @@ text = "Shortcut Description"
 layout_mode = 0
 offset_left = 499.0
 offset_top = 283.0
-offset_right = 700.0
-offset_bottom = 323.0
-text = "User Entered Keys"
-
-[node name="Time Add Button" type="Button" parent="." unique_id=617698817]
-layout_mode = 0
-offset_left = 129.0
-offset_top = 168.0
-offset_right = 422.0
-offset_bottom = 272.0
-text = "Test"
-
-[connection signal="pressed" from="Time Add Button" to="Game Over Progress" method="OnTimeAddButtonPressed"]
+offset_right = 765.0
+offset_bottom = 360.0
+bbcode_enabled = true
+text = "[color=blue]User Entered Keys[/color]"
