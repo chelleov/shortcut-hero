@@ -15,4 +15,19 @@ public partial class PlayWindow : Control
 	public override void _Process(double delta)
 	{
 	}
+	
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventKey keyEvent && keyEvent.Pressed)
+		{
+			if (keyEvent.AltPressed && keyEvent.Keycode == Key.T)
+			{
+				GD.Print($"{keyEvent.Keycode} detected and cancelled");
+				GetViewport().SetInputAsHandled();
+			} else
+			{
+				GD.Print($"Key pressed: {keyEvent.Keycode}");
+			}
+		}
+	}
 }
