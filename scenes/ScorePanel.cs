@@ -3,10 +3,10 @@ using System;
 
 public partial class ScorePanel : Control
 {
-	int _round;
-	Label _currentScore;
-	Label _currentRound;
-	GameState _gameState;
+	private int _round;
+	private Label _currentScore;
+	private Label _currentRound;
+	private GameState _gameState;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

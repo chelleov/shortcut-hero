@@ -1,7 +1,7 @@
 [
   {
     "shortcutName": "Copy",
-    "shortcutDescription": "Copies the selected item to the clipboard.",
+    "shortcutDescription": "Copies the selected item to the clipboard (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "C"
@@ -9,7 +9,7 @@
   },
   {
     "shortcutName": "Paste",
-    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location.",
+    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "V"
@@ -17,7 +17,7 @@
   },
   {
     "shortcutName": "Cut",
-    "shortcutDescription": "Cuts the selected item and moves it to the clipboard.",
+    "shortcutDescription": "Cuts the selected item and moves it to the clipboard (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "X"
@@ -25,7 +25,7 @@
   },
   {
     "shortcutName": "Undo",
-    "shortcutDescription": "Reverses the last action performed.",
+    "shortcutDescription": "Reverses the last action performed (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "Z"
@@ -33,7 +33,7 @@
   },
   {
     "shortcutName": "Save",
-    "shortcutDescription": "Saves the current document or file.",
+    "shortcutDescription": "Saves the current document or file (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "S"
@@ -42,7 +42,7 @@
   },
   {
     "shortcutName": "Select All",
-    "shortcutDescription": "Selects all content in the current document or window.",
+    "shortcutDescription": "Selects all content in the current document or window (EXCEL).",
     "shortcutKeys": [
       "Ctrl",
       "A"

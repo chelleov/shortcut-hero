@@ -5,13 +5,16 @@ using System.Collections.Generic;
 
 public partial class MainMenu : Control
 {
-	FoldableContainer _gameMode;
-	VBoxContainer _gameModeList;
+	private FoldableContainer _gameMode;
+	private VBoxContainer _gameModeList;
+	private GameState _gameState;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_gameMode = GetNode<FoldableContainer>("Game Mode");
 		_gameModeList = GetNode<VBoxContainer>("Game Mode/Game Mode List");
+		_gameState = GetNode<GameState>("/root/GameState");
 		
 		string configurationsPath = "res://data";
 		string[] jsonFiles = GetJsonFiles(configurationsPath);
@@ -69,6 +72,7 @@ public partial class MainMenu : Control
 	{
 		GD.Print("Play button pressed");
 		GetTree().ChangeSceneToFile("res://scenes/pre_game.tscn");
+		_gameState.JsonFilePath = $"res://data/{_gameMode.Title}.json";
 	}
 
 	public void OnExitButtonPressed()

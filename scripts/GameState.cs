@@ -4,6 +4,8 @@ using System;
 public partial class GameState : Node
 {
 	public int Score = 0;
+	public string JsonFilePath;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

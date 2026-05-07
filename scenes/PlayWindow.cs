@@ -14,6 +14,7 @@ public partial class PlayWindow : Control
 	private ShortcutData currentShortcut;
 	private RandomNumberGenerator _rng = new RandomNumberGenerator();
 	private GameOverProgress _gameOverProgress;
+    private GameState _gameState;
 
     public override void _Ready()
     {
@@ -24,6 +25,7 @@ public partial class PlayWindow : Control
 		_scorePanel = GetNode<ScorePanel>("Score Panel");
 		_userKeysLabel = GetNode<RichTextLabel>("User Keys");
 		_gameOverProgress = GetNode<GameOverProgress>("Game Over Progress");
+        _gameState = GetNode<GameState>("/root/GameState");
 
         GD.Print("PlayWindow ready");
         LoadShortcuts();	
@@ -94,7 +96,7 @@ public partial class PlayWindow : Control
 
     private void LoadShortcuts()
     {
-        string filePath = "res://data/office_shortcuts.json";
+        string filePath = _gameState.JsonFilePath;
 
         if (!FileAccess.FileExists(filePath))
         {

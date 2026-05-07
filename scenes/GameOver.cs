@@ -3,8 +3,8 @@ using System;
 
 public partial class GameOver : Control
 {
-	Tree _scoreList;
-	GameState _gameState;
+	private Tree _scoreList;
+	private GameState _gameState;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
