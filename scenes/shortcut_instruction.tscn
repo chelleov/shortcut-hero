@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cx5n8jck6ga07"]
+
+[ext_resource type="Script" uid="uid://qak6sfsulidp" path="res://scenes/ShortcutInstruction.cs" id="1_8hc0y"]
+
+[node name="Shortcut Instruction" type="Control" unique_id=509765154]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 80.0
+script = ExtResource("1_8hc0y")
+
+[node name="Instruction List" type="VBoxContainer" parent="." unique_id=1885506700]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 80.0
+
+[node name="Current Shortcut Name" type="Label" parent="Instruction List" unique_id=546049500]
+layout_mode = 2
+text = "Current Shortcut Name"
+horizontal_alignment = 1
+
+[node name="Current Shortcut Description" type="Label" parent="Instruction List" unique_id=1266547274]
+layout_mode = 2
+text = "Current Shortcut Description"
+horizontal_alignment = 1
+
+[node name="Current Shortcut Target" type="Label" parent="Instruction List" unique_id=1196935383]
+layout_mode = 2
+text = "Current Shortcut Keys"
+horizontal_alignment = 1

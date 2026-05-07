@@ -5,14 +5,6 @@ using System.Text.Json;
 
 public partial class PlayWindow : Control
 {
-    public class ShortcutData
-    {
-        public string shortcutName { get; set; }
-        public string shortcutDescription { get; set; }
-        public List<string> shortcutKeys { get; set; }
-        public bool isOrderImportant { get; set; }
-    }
-
     private List<ShortcutData> _shortcuts = new();
     private Button timeAddButton;
     private Label _shortcutNameLabel;
@@ -50,9 +42,9 @@ public partial class PlayWindow : Control
         _shortcutDescriptionLabel = GetNode<Label>("Current Shortcut Description");
         _neededShortcutLabel = GetNode<Label>("Current Shortcut Target");
         
-        _shortcutNameLabel.Text = currentShortcut.shortcutName;
-        _shortcutDescriptionLabel.Text = currentShortcut.shortcutDescription;
-        _neededShortcutLabel.Text = string.Join(" + ", currentShortcut.shortcutKeys);
+        _shortcutNameLabel.Text = currentShortcut.Name;
+        _shortcutDescriptionLabel.Text = currentShortcut.Description;
+        _neededShortcutLabel.Text = string.Join(" + ", currentShortcut.Keys);
     }
 
     private void UpdateUserKeysUI()
@@ -73,7 +65,7 @@ public partial class PlayWindow : Control
             string key = _pressedKeys[i];
             
             // A key is "correct" only if it matches the JSON sequence AND all keys before it were also correct
-            if (sequenceMatches && i < currentShortcut.shortcutKeys.Count && key == currentShortcut.shortcutKeys[i])
+            if (sequenceMatches && i < currentShortcut.Keys.Count && key == currentShortcut.Keys[i])
             {
                 formattedKeys.Add($"[color=green]{key}[/color]");
             }
@@ -87,9 +79,9 @@ public partial class PlayWindow : Control
         _userKeysLabel.Text = string.Join(" + ", formattedKeys);
 
         // Success condition: If all keys match and the count is the same, load the next one
-        if (sequenceMatches && _pressedKeys.Count == currentShortcut.shortcutKeys.Count)
+        if (sequenceMatches && _pressedKeys.Count == currentShortcut.Keys.Count)
         {
-            GD.Print($"Match found for {currentShortcut.shortcutName}! Loading next...");
+            GD.Print($"Match found for {currentShortcut.Name}! Loading next...");
             // CallDeferred is used to ensure the state change happens safely
             CallDeferred(MethodName.LoadNewShortcut);
 			_gameOverProgress.AddTime(0.5f);
