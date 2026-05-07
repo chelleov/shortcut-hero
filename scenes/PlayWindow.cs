@@ -6,10 +6,9 @@ using System.Text.Json;
 public partial class PlayWindow : Control
 {
     private List<ShortcutData> _shortcuts = new();
-    private Button timeAddButton;
-    private Label _shortcutNameLabel;
-    private Label _shortcutDescriptionLabel;
-    private Label _neededShortcutLabel;
+    private ShortcutInstruction _currentShortcutInstruction;
+    private ShortcutInstruction _nextShortcutInstruction;
+
     private RichTextLabel _userKeysLabel;
     private List<string> _pressedKeys = new();
 	private ShortcutData currentShortcut;
@@ -20,15 +19,15 @@ public partial class PlayWindow : Control
     {
 		_rng.Randomize();
 
-        timeAddButton = GetNode<Button>("Time Add Button");
+        _currentShortcutInstruction = GetNode<ShortcutInstruction>("Current Instruction");
+		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Next Instruction");
+
 		_userKeysLabel = GetNode<RichTextLabel>("User Keys");
 		_gameOverProgress = GetNode<GameOverProgress>("Game Over Progress");
 
         GD.Print("PlayWindow ready");
         LoadShortcuts();	
 		LoadNewShortcut();
-
-
     }
 
     private void LoadNewShortcut()
@@ -37,14 +36,13 @@ public partial class PlayWindow : Control
 		_pressedKeys.Clear();
 		int randomInt = _rng.RandiRange(0, _shortcuts.Count - 1);
 		currentShortcut = _shortcuts[randomInt];
+        GD.Print($"Setting shortcut instruction to: {currentShortcut.Name}");
+        GD.Print($"First shortcut: {_shortcuts[0].Name}");
 		
-        _shortcutNameLabel = GetNode<Label>("Current Shortcut Name");
-        _shortcutDescriptionLabel = GetNode<Label>("Current Shortcut Description");
-        _neededShortcutLabel = GetNode<Label>("Current Shortcut Target");
-        
-        _shortcutNameLabel.Text = currentShortcut.Name;
-        _shortcutDescriptionLabel.Text = currentShortcut.Description;
-        _neededShortcutLabel.Text = string.Join(" + ", currentShortcut.Keys);
+        _currentShortcutInstruction.SetShortcut(currentShortcut);
+        _currentShortcutInstruction.SetInstructionsVisible(true);
+        _nextShortcutInstruction.SetShortcut(currentShortcut);
+        _nextShortcutInstruction.SetInstructionsVisible(false);
     }
 
     private void UpdateUserKeysUI()

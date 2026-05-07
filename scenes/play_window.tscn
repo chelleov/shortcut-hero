@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cp27c26bgpdsg" path="res://scenes/PlayWindow.cs" id="1_gtx0c"]
 [ext_resource type="Script" uid="uid://cgle7r5mq1hx8" path="res://scenes/GameOverProgress.cs" id="2_o4cd0"]
+[ext_resource type="PackedScene" uid="uid://cx5n8jck6ga07" path="res://scenes/shortcut_instruction.tscn" id="3_2g3cr"]
 
 [node name="Play Window" type="Control" unique_id=312381409]
-custom_minimum_size = Vector2(1280, 720)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
@@ -13,10 +13,10 @@ script = ExtResource("1_gtx0c")
 
 [node name="Game Over Progress" type="ProgressBar" parent="." unique_id=1596221303]
 layout_mode = 0
-offset_left = 348.0
-offset_top = 372.0
-offset_right = 896.0
-offset_bottom = 399.0
+offset_left = 64.0
+offset_top = 384.0
+offset_right = 656.0
+offset_bottom = 411.0
 script = ExtResource("2_o4cd0")
 
 [node name="Game Over Countdown" type="Timer" parent="Game Over Progress" unique_id=691931224]
@@ -53,36 +53,25 @@ offset_right = 359.0
 offset_bottom = 40.0
 text = "1"
 
-[node name="Current Shortcut Name" type="Label" parent="." unique_id=97853039]
+[node name="Current Instruction" parent="." unique_id=509765154 instance=ExtResource("3_2g3cr")]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 111.0
-offset_right = 694.0
-offset_bottom = 160.0
-text = "Current Needed Name
-"
+offset_left = 96.0
+offset_top = 232.0
+offset_right = 608.0
+offset_bottom = 312.0
 
-[node name="Current Shortcut Target" type="Label" parent="." unique_id=278699642]
+[node name="Next Instruction" parent="." unique_id=1388800048 instance=ExtResource("3_2g3cr")]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 168.0
-offset_right = 694.0
-offset_bottom = 191.0
-text = "Current Needed Shortcut"
-
-[node name="Current Shortcut Description" type="Label" parent="." unique_id=1450693737]
-layout_mode = 0
-offset_left = 499.0
-offset_top = 223.0
-offset_right = 694.0
-offset_bottom = 246.0
-text = "Shortcut Description"
+offset_left = 384.0
+offset_top = 232.0
+offset_right = 896.0
+offset_bottom = 312.0
 
 [node name="User Keys" type="RichTextLabel" parent="." unique_id=888997760]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 283.0
-offset_right = 765.0
-offset_bottom = 360.0
+offset_left = 264.0
+offset_top = 336.0
+offset_right = 456.0
+offset_bottom = 368.0
 bbcode_enabled = true
 text = "[color=blue]User Entered Keys[/color]"
