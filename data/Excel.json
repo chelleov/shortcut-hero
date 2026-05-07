@@ -1,0 +1,51 @@
+[
+  {
+    "shortcutName": "Copy",
+    "shortcutDescription": "Copies the selected item to the clipboard.",
+    "shortcutKeys": [
+      "Ctrl",
+      "C"
+    ]
+  },
+  {
+    "shortcutName": "Paste",
+    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location.",
+    "shortcutKeys": [
+      "Ctrl",
+      "V"
+    ]
+  },
+  {
+    "shortcutName": "Cut",
+    "shortcutDescription": "Cuts the selected item and moves it to the clipboard.",
+    "shortcutKeys": [
+      "Ctrl",
+      "X"
+    ]
+  },
+  {
+    "shortcutName": "Undo",
+    "shortcutDescription": "Reverses the last action performed.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Z"
+    ]
+  },
+  {
+    "shortcutName": "Save",
+    "shortcutDescription": "Saves the current document or file.",
+    "shortcutKeys": [
+      "Ctrl",
+      "S"
+    ],
+    "isOrderImportant": false
+  },
+  {
+    "shortcutName": "Select All",
+    "shortcutDescription": "Selects all content in the current document or window.",
+    "shortcutKeys": [
+      "Ctrl",
+      "A"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://r6li5afyl357"]
+
+[ext_resource type="Script" uid="uid://5trgco6po0c8" path="res://scenes/PreGame.cs" id="1_fwt8j"]
+
+[node name="Pre Game" type="Control" unique_id=1518789882]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwt8j")
+
+[node name="Prepare Message" type="Label" parent="." unique_id=278022926]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 87.0
+text = "This text will hold preperations message
+with the current user's score
+Hidden if its the first round"
+horizontal_alignment = 1
+
+[node name="Start Instructions" type="Label" parent="." unique_id=680203787]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 312.0
+offset_right = 896.0
+offset_bottom = 335.0
+text = "Press any key to start"
+horizontal_alignment = 1

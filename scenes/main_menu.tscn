@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://d0x34k1orvk4s"]
+
+[ext_resource type="Script" uid="uid://jxvd7g1pr801" path="res://scenes/MainMenu.cs" id="1_l6cm7"]
+
+[node name="Main Menu" type="Control" unique_id=1386378883]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("1_l6cm7")
+
+[node name="Play Button" type="Button" parent="." unique_id=809201134]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 247.0
+text = "PLAY"
+
+[node name="Exit Button" type="Button" parent="." unique_id=456335444]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 503.0
+text = "QUIT"
+
+[node name="Game Mode" type="FoldableContainer" parent="." unique_id=1850251324]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 256.0
+offset_right = 656.0
+offset_bottom = 288.0
+folded = true
+title = " "
+
+[node name="Game Mode List" type="VBoxContainer" parent="Game Mode" unique_id=1546245851]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="Play Button" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="Exit Button" to="." method="OnExitButtonPressed"]
