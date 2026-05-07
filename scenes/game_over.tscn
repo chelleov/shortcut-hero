@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cxgsryta2iqy1"]
+
+[ext_resource type="Script" uid="uid://cq5q1wq0555mn" path="res://scenes/GameOver.cs" id="1_xeevv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xeevv"]
+
+[node name="Game Over" type="Control" unique_id=468651210]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="Game Over Message" type="Label" parent="." unique_id=1476016493]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 552.0
+offset_bottom = 87.0
+text = "GAME OVER"
+
+[node name="Score List" type="Tree" parent="." unique_id=1844648153]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 128.0
+offset_right = 672.0
+offset_bottom = 304.0
+mouse_filter = 2
+theme_override_colors/relationship_line_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+theme_override_colors/parent_hl_line_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_colors/children_hl_line_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xeevv")
+columns = 2
+column_titles_visible = true
+allow_search = false

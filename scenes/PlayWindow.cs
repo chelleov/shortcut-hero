@@ -8,7 +8,7 @@ public partial class PlayWindow : Control
     private List<ShortcutData> _shortcuts = new();
     private ShortcutInstruction _currentShortcutInstruction;
     private ShortcutInstruction _nextShortcutInstruction;
-
+    private ScorePanel _scorePanel;
     private RichTextLabel _userKeysLabel;
     private List<string> _pressedKeys = new();
 	private ShortcutData currentShortcut;
@@ -21,7 +21,7 @@ public partial class PlayWindow : Control
 
         _currentShortcutInstruction = GetNode<ShortcutInstruction>("Current Instruction");
 		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Next Instruction");
-
+		_scorePanel = GetNode<ScorePanel>("Score Panel");
 		_userKeysLabel = GetNode<RichTextLabel>("User Keys");
 		_gameOverProgress = GetNode<GameOverProgress>("Game Over Progress");
 
@@ -29,6 +29,11 @@ public partial class PlayWindow : Control
         LoadShortcuts();	
 		LoadNewShortcut();
     }
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
 
     private void LoadNewShortcut()
     {
@@ -82,6 +87,7 @@ public partial class PlayWindow : Control
             GD.Print($"Match found for {currentShortcut.Name}! Loading next...");
             // CallDeferred is used to ensure the state change happens safely
             CallDeferred(MethodName.LoadNewShortcut);
+            _scorePanel.AddScore(100);
 			_gameOverProgress.AddTime(0.5f);
         }
     }
@@ -110,11 +116,6 @@ public partial class PlayWindow : Control
         }
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-	
 	public override void _Input(InputEvent @event)
 	{
 		if (@event is InputEventKey keyEvent)
@@ -142,4 +143,9 @@ public partial class PlayWindow : Control
             }
 		}
 	}
+
+    public void OnGameOverCountdownTimeout()
+    {
+        GetTree().ChangeSceneToFile("res://scenes/game_over.tscn");
+    }
 }

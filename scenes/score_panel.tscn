@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cfk1624bn5ggb"]
+
+[ext_resource type="Script" uid="uid://b4ux18atjn2eu" path="res://scenes/ScorePanel.cs" id="1_lwh8y"]
+
+[node name="Score Panel" type="Control" unique_id=1016884252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+offset_bottom = -656.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lwh8y")
+
+[node name="Round Title" type="Label" parent="." unique_id=964568417]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ROUND:"
+
+[node name="Current Round" type="Label" parent="." unique_id=1204831039]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 245.0
+offset_bottom = 23.0
+text = "Round number"
+
+[node name="Score Title" type="Label" parent="." unique_id=33593774]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 63.0
+text = "SCORE:"
+
+[node name="Current Score" type="Label" parent="." unique_id=1378870005]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 168.0
+offset_bottom = 63.0
+text = "Current Score"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cj7onubn3h8hn"]
 
 [ext_resource type="Script" uid="uid://cp27c26bgpdsg" path="res://scenes/PlayWindow.cs" id="1_gtx0c"]
+[ext_resource type="PackedScene" uid="uid://cfk1624bn5ggb" path="res://scenes/score_panel.tscn" id="2_8x763"]
 [ext_resource type="Script" uid="uid://cgle7r5mq1hx8" path="res://scenes/GameOverProgress.cs" id="2_o4cd0"]
 [ext_resource type="PackedScene" uid="uid://cx5n8jck6ga07" path="res://scenes/shortcut_instruction.tscn" id="3_2g3cr"]
 
@@ -11,47 +12,8 @@ offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("1_gtx0c")
 
-[node name="Game Over Progress" type="ProgressBar" parent="." unique_id=1596221303]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 384.0
-offset_right = 656.0
-offset_bottom = 411.0
-script = ExtResource("2_o4cd0")
-
-[node name="Game Over Countdown" type="Timer" parent="Game Over Progress" unique_id=691931224]
-one_shot = true
-
-[node name="Score" type="Label" parent="." unique_id=1293406496]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 52.0
-offset_right = 129.0
-offset_bottom = 75.0
-text = "Score"
-
-[node name="Score Value" type="RichTextLabel" parent="." unique_id=799481454]
-layout_mode = 0
-offset_left = 158.0
-offset_top = 52.0
-offset_right = 359.0
-offset_bottom = 92.0
-text = "1
-"
-
-[node name="Round Number" type="Label" parent="." unique_id=1412909590]
-layout_mode = 0
-offset_left = 20.0
-offset_right = 158.0
-offset_bottom = 33.0
-text = "Round Number"
-
-[node name="Round Number Value" type="RichTextLabel" parent="." unique_id=296535096]
-layout_mode = 0
-offset_left = 158.0
-offset_right = 359.0
-offset_bottom = 40.0
-text = "1"
+[node name="Score Panel" parent="." unique_id=1016884252 instance=ExtResource("2_8x763")]
+layout_mode = 1
 
 [node name="Current Instruction" parent="." unique_id=509765154 instance=ExtResource("3_2g3cr")]
 layout_mode = 0
@@ -75,3 +37,16 @@ offset_right = 456.0
 offset_bottom = 368.0
 bbcode_enabled = true
 text = "[color=blue]User Entered Keys[/color]"
+
+[node name="Game Over Progress" type="ProgressBar" parent="." unique_id=1596221303]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 384.0
+offset_right = 656.0
+offset_bottom = 411.0
+script = ExtResource("2_o4cd0")
+
+[node name="Game Over Countdown" type="Timer" parent="Game Over Progress" unique_id=691931224]
+one_shot = true
+
+[connection signal="timeout" from="Game Over Progress/Game Over Countdown" to="." method="OnGameOverCountdownTimeout"]
