@@ -2,41 +2,60 @@
 
 [ext_resource type="Script" uid="uid://b4ux18atjn2eu" path="res://scenes/ScorePanel.cs" id="1_lwh8y"]
 
-[node name="Score Panel" type="Control" unique_id=1016884252]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_bg"]
+bg_color = Color(0.06, 0.08, 0.14, 0.9)
+border_width_bottom = 1
+border_color = Color(0.2, 0.3, 0.45, 0.4)
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 14
+font_color = Color(0.45, 0.55, 0.70, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_value"]
+font_size = 22
+font_color = Color(0.92, 0.95, 1.0, 1)
+
+[node name="Score Panel" type="PanelContainer" unique_id=1016884252]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1024.0
-offset_bottom = -656.0
+offset_bottom = 72.0
 grow_horizontal = 2
-grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel_bg")
 script = ExtResource("1_lwh8y")
 
-[node name="Round Title" type="Label" parent="." unique_id=964568417]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "ROUND:"
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 48
 
-[node name="Current Round" type="Label" parent="." unique_id=1204831039]
-layout_mode = 0
-offset_left = 128.0
-offset_right = 245.0
-offset_bottom = 23.0
-text = "Round number"
+[node name="Round Group" type="HBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="Score Title" type="Label" parent="." unique_id=33593774]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 63.0
-text = "SCORE:"
+[node name="Round Title" type="Label" parent="HBox/Round Group" unique_id=964568417]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_title")
+text = "ROUND"
 
-[node name="Current Score" type="Label" parent="." unique_id=1378870005]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 40.0
-offset_right = 168.0
-offset_bottom = 63.0
-text = "Current Score"
+[node name="Current Round" type="Label" parent="HBox/Round Group" unique_id=1204831039]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_value")
+text = "1"
+
+[node name="Score Group" type="HBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Score Title" type="Label" parent="HBox/Score Group" unique_id=33593774]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_title")
+text = "SCORE"
+
+[node name="Current Score" type="Label" parent="HBox/Score Group" unique_id=1378870005]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_value")
+text = "0"

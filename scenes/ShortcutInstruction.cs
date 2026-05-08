@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class ShortcutInstruction : Control
+public partial class ShortcutInstruction : PanelContainer
 {
 	Label _emptySpace;
 	Label _shortcutName;

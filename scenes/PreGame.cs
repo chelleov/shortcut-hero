@@ -8,7 +8,7 @@ public partial class PreGame : Control
 	public override void _Ready()
 	{
 		_gameState = GetNode<GameState>("/root/GameState");
-		if (_gameState.IsGameStarted)
+		if (!_gameState.IsGameStarted)
 		{
 			_gameState.IsGameStarted = true;
 			_gameState.Score = 0;
@@ -17,9 +17,17 @@ public partial class PreGame : Control
 		else
 		{
 			// _gameState.DifficultyLevel = 1;
-			_gameState.TimeLimit -= 0.5f;
-			_gameState.TimeAddition -= 0.1f;
+			_gameState.Round++;
+			
+			if(_gameState.TimeAddition > 0.2f)
+			{
+				_gameState.TimeAddition -= 0.1f;
+			}
 
+			if(_gameState.TimeLimit > 5f)
+			{
+				_gameState.TimeLimit -= 0.5f;
+			}
 		}
 	}
 
@@ -30,7 +38,7 @@ public partial class PreGame : Control
 
 	public override void _Input(InputEvent @event)
 	{
-		if (@event is InputEventKey keyEvent)
+		if (@event is InputEventKey keyEvent && keyEvent.Pressed && !keyEvent.IsEcho())
 		{
             GetTree().ChangeSceneToFile("res://scenes/play_window.tscn");
 		}

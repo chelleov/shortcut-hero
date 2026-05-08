@@ -4,6 +4,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xeevv"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_gameover"]
+font_size = 48
+font_color = Color(0.95, 0.3, 0.35, 1)
+shadow_color = Color(0.95, 0.3, 0.35, 0.25)
+shadow_offset = Vector2(0, 3)
+
 [node name="Game Over" type="Control" unique_id=468651210]
 layout_mode = 3
 anchors_preset = 15
@@ -13,24 +19,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xeevv")
 
-[node name="Game Over Message" type="Label" parent="." unique_id=1476016493]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 64.0
-offset_right = 552.0
-offset_bottom = 87.0
-text = "GAME OVER"
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
 
-[node name="Score List" type="Tree" parent="." unique_id=1844648153]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 128.0
-offset_right = 672.0
-offset_bottom = 304.0
+[node name="Game Over Message" type="Label" parent="VBox" unique_id=1476016493]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_gameover")
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Score List" type="Tree" parent="VBox" unique_id=1844648153]
+layout_mode = 2
+custom_minimum_size = Vector2(400, 200)
+size_flags_vertical = 3
 mouse_filter = 2
-theme_override_colors/relationship_line_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
-theme_override_colors/parent_hl_line_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
-theme_override_colors/children_hl_line_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_colors/relationship_line_color = Color(0.19, 0.19, 0.19, 1)
+theme_override_colors/parent_hl_line_color = Color(0.19, 0.19, 0.19, 1)
+theme_override_colors/children_hl_line_color = Color(0.19, 0.19, 0.19, 1)
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xeevv")
 columns = 2
 column_titles_visible = true

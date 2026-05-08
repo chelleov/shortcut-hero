@@ -2,6 +2,20 @@
 
 [ext_resource type="Script" uid="uid://5trgco6po0c8" path="res://scenes/PreGame.cs" id="1_fwt8j"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_heading"]
+font_size = 36
+font_color = Color(0.92, 0.95, 1.0, 1)
+shadow_color = Color(0.12, 0.56, 0.98, 0.3)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_body"]
+font_size = 16
+font_color = Color(0.55, 0.65, 0.78, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_prompt"]
+font_size = 18
+font_color = Color(0.35, 0.78, 0.98, 1)
+
 [node name="Pre Game" type="Control" unique_id=1518789882]
 layout_mode = 3
 anchors_preset = 15
@@ -11,22 +25,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fwt8j")
 
-[node name="Prepare Message" type="Label" parent="." unique_id=278022926]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 64.0
-offset_right = 896.0
-offset_bottom = 87.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Heading" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_heading")
+text = "GET READY"
+horizontal_alignment = 1
+
+[node name="Prepare Message" type="Label" parent="CenterContainer/VBox" unique_id=278022926]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_body")
 text = "This text will hold preperations message
 with the current user's score
 Hidden if its the first round"
 horizontal_alignment = 1
 
-[node name="Start Instructions" type="Label" parent="." unique_id=680203787]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 312.0
-offset_right = 896.0
-offset_bottom = 335.0
+[node name="Spacer" type="Control" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="Start Instructions" type="Label" parent="CenterContainer/VBox" unique_id=680203787]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_prompt")
 text = "Press any key to start"
 horizontal_alignment = 1

@@ -15,20 +15,24 @@ public partial class PlayWindow : Control
 	private RandomNumberGenerator _rng = new RandomNumberGenerator();
 	private GameOverProgress _gameOverProgress;
     private GameState _gameState;
+    private List<ShortcutData> _shortcutRound = new();
+    private int _currentIndex = 0;
+    private const int RoundSize = 10;
 
     public override void _Ready()
     {
 		_rng.Randomize();
 
-        _currentShortcutInstruction = GetNode<ShortcutInstruction>("Current Instruction");
-		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Next Instruction");
+        _currentShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Current Instruction");
+		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Next Instruction");
 		_scorePanel = GetNode<ScorePanel>("Score Panel");
 		_userKeysLabel = GetNode<RichTextLabel>("User Keys");
 		_gameOverProgress = GetNode<GameOverProgress>("Game Over Progress");
         _gameState = GetNode<GameState>("/root/GameState");
 
         GD.Print("PlayWindow ready");
-        LoadShortcuts();	
+        LoadShortcuts();
+        GenerateNewRound();
 		LoadNewShortcut();
     }
 
@@ -37,19 +41,48 @@ public partial class PlayWindow : Control
 	{
 	}
 
+    private void GenerateNewRound()
+    {
+        _shortcutRound.Clear();
+        _currentIndex = 0;
+        for (int i = 0; i < RoundSize; i++)
+        {
+            int randomInt = _rng.RandiRange(0, _shortcuts.Count - 1);
+            _shortcutRound.Add(_shortcuts[randomInt]);
+        }
+    }
+
     private void LoadNewShortcut()
     {
 		_userKeysLabel.Text = "";
 		_pressedKeys.Clear();
-		int randomInt = _rng.RandiRange(0, _shortcuts.Count - 1);
-		currentShortcut = _shortcuts[randomInt];
-        GD.Print($"Setting shortcut instruction to: {currentShortcut.Name}");
-        GD.Print($"First shortcut: {_shortcuts[0].Name}");
-		
+
+        // If we've used all shortcuts in this round, go to pre-game
+        if (_currentIndex >= _shortcutRound.Count)
+        {
+            GetTree().ChangeSceneToFile("res://scenes/pre_game.tscn");
+            return;
+        }
+
+        currentShortcut = _shortcutRound[_currentIndex];
+        GD.Print($"Setting shortcut instruction to: {currentShortcut.Name} ({_currentIndex + 1}/{RoundSize})");
+
+        // Show current shortcut with full instructions
         _currentShortcutInstruction.SetShortcut(currentShortcut);
         _currentShortcutInstruction.SetInstructionsVisible(true);
-        _nextShortcutInstruction.SetShortcut(currentShortcut);
-        _nextShortcutInstruction.SetInstructionsVisible(false);
+
+        // Show the next shortcut (name only, no details), or hide if last
+        if (_currentIndex + 1 < _shortcutRound.Count)
+        {
+            _nextShortcutInstruction.SetShortcut(_shortcutRound[_currentIndex + 1]);
+            _nextShortcutInstruction.SetInstructionsVisible(false);
+        }
+        else
+        {
+            _nextShortcutInstruction.Visible = false;
+        }
+
+        _currentIndex++;
     }
 
     private void UpdateUserKeysUI()
@@ -89,7 +122,7 @@ public partial class PlayWindow : Control
             GD.Print($"Match found for {currentShortcut.Name}! Loading next...");
             // CallDeferred is used to ensure the state change happens safely
             CallDeferred(MethodName.LoadNewShortcut);
-            _scorePanel.AddScore(100);
+            _scorePanel.AddScore((int)_gameOverProgress.Value);
 			_gameOverProgress.AddTime();
         }
     }

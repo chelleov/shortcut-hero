@@ -8,7 +8,7 @@ public partial class GameOver : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_scoreList = GetNode<Tree>("Score List");
+		_scoreList = GetNode<Tree>("VBox/Score List");
 		_gameState = GetNode<GameState>("/root/GameState");
 
 		_scoreList.Clear();
