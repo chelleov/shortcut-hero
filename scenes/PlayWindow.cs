@@ -90,7 +90,7 @@ public partial class PlayWindow : Control
             // CallDeferred is used to ensure the state change happens safely
             CallDeferred(MethodName.LoadNewShortcut);
             _scorePanel.AddScore(100);
-			_gameOverProgress.AddTime(0.5f);
+			_gameOverProgress.AddTime();
         }
     }
 

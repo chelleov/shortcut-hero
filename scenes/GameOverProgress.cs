@@ -3,14 +3,17 @@ using System;
 
 public partial class GameOverProgress : ProgressBar
 {
-	Timer gameOverTimer;
+	private GameState _gameState;
+	private Timer gameOverTimer;
 
-	float maxTime = 10;
+	float maxTime;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		gameOverTimer = GetNode<Timer>("Game Over Countdown");
+		_gameState = GetNode<GameState>("/root/GameState");
+		maxTime = _gameState.TimeLimit;
 		gameOverTimer.Start(maxTime);
 
 		GD.Print("Game Over Progress Loaded");
@@ -22,17 +25,12 @@ public partial class GameOverProgress : ProgressBar
 		Value = 100 * (gameOverTimer.TimeLeft / maxTime);
 	}
 
-	public Boolean AddTime(float value)
+	public Boolean AddTime()
 	{
 		float currentTimeLeft = (float)gameOverTimer.TimeLeft;
 
         gameOverTimer.Stop();
-        gameOverTimer.Start(currentTimeLeft + value);
+        gameOverTimer.Start(currentTimeLeft + _gameState.TimeAddition);
 		return true;
-	}
-
-	public void OnTimeAddButtonPressed()
-	{
-		AddTime((float)2);
 	}
 }
