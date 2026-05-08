@@ -23,8 +23,8 @@ public partial class PlayWindow : Control
     {
 		_rng.Randomize();
 
-        _currentShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Current Instruction");
-		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Next Instruction");
+        _currentShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Current Group/Current Instruction");
+		_nextShortcutInstruction = GetNode<ShortcutInstruction>("Instructions Container/Next Group/Next Instruction");
 		_scorePanel = GetNode<ScorePanel>("Score Panel");
 		_userKeysLabel = GetNode<RichTextLabel>("User Keys");
 		_gameOverProgress = GetNode<GameOverProgress>("Game Over Progress");
@@ -157,8 +157,8 @@ public partial class PlayWindow : Control
 		{
             string keyName = OS.GetKeycodeString(keyEvent.Keycode);
             
-            // Normalize names to match JSON (e.g., "Control" -> "Ctrl")
-            if (keyName == "Control") keyName = "Ctrl";
+            // Normalize Godot key names to match JSON shortcut key names
+            keyName = NormalizeKeyName(keyName);
 
             if (keyEvent.Pressed && !keyEvent.IsEcho())
             {
@@ -182,5 +182,34 @@ public partial class PlayWindow : Control
     public void OnGameOverCountdownTimeout()
     {
         GetTree().ChangeSceneToFile("res://scenes/game_over.tscn");
+    }
+
+    private static readonly Dictionary<string, string> KeyNameMap = new()
+    {
+        { "Control", "Ctrl" },
+        { "Minus", "-" },
+        { "Plus", "+" },
+        { "Equal", "=" },
+        { "Semicolon", ";" },
+        { "Colon", ":" },
+        { "Period", "." },
+        { "Comma", "," },
+        { "Slash", "/" },
+        { "Backslash", "\\" },
+        { "BracketLeft", "[" },
+        { "BracketRight", "]" },
+        { "Apostrophe", "'" },
+        { "QuoteLeft", "`" },
+        { "Greater", ">" },
+        { "Less", "<" },
+        { "Percent", "%" },
+        { "KP Enter", "Enter" },
+        { "KP Add", "+" },
+        { "KP Subtract", "-" },
+    };
+
+    private static string NormalizeKeyName(string godotKeyName)
+    {
+        return KeyNameMap.TryGetValue(godotKeyName, out string mapped) ? mapped : godotKeyName;
     }
 }

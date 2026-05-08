@@ -1,7 +1,54 @@
 [
   {
+    "shortcutName": "New Document",
+    "shortcutDescription": "Creates a new blank document.",
+    "shortcutKeys": [
+      "Ctrl",
+      "N"
+    ]
+  },
+  {
+    "shortcutName": "Open",
+    "shortcutDescription": "Opens an existing document.",
+    "shortcutKeys": [
+      "Ctrl",
+      "O"
+    ]
+  },
+  {
+    "shortcutName": "Save",
+    "shortcutDescription": "Saves the current document.",
+    "shortcutKeys": [
+      "Ctrl",
+      "S"
+    ]
+  },
+  {
+    "shortcutName": "Save As",
+    "shortcutDescription": "Opens the Save As dialog to save with a new name or location.",
+    "shortcutKeys": [
+      "F12"
+    ]
+  },
+  {
+    "shortcutName": "Close Document",
+    "shortcutDescription": "Closes the current document.",
+    "shortcutKeys": [
+      "Ctrl",
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Print",
+    "shortcutDescription": "Opens the Print dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "P"
+    ]
+  },
+  {
     "shortcutName": "Copy",
-    "shortcutDescription": "Copies the selected item to the clipboard. (WORD)",
+    "shortcutDescription": "Copies the selected text or object to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "C"
@@ -9,7 +56,7 @@
   },
   {
     "shortcutName": "Paste",
-    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location. (WORD)",
+    "shortcutDescription": "Pastes the contents of the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "V"
@@ -17,7 +64,7 @@
   },
   {
     "shortcutName": "Cut",
-    "shortcutDescription": "Cuts the selected item and moves it to the clipboard. (WORD)",
+    "shortcutDescription": "Cuts the selected text or object to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "X"
@@ -25,27 +72,377 @@
   },
   {
     "shortcutName": "Undo",
-    "shortcutDescription": "Reverses the last action performed. (WORD)",
+    "shortcutDescription": "Reverses the last action performed.",
     "shortcutKeys": [
       "Ctrl",
       "Z"
     ]
   },
   {
-    "shortcutName": "Save",
-    "shortcutDescription": "Saves the current document or file. (WORD)",
+    "shortcutName": "Redo",
+    "shortcutDescription": "Redoes the last undone action.",
     "shortcutKeys": [
       "Ctrl",
-      "S"
-    ],
-    "isOrderImportant": false
+      "Y"
+    ]
   },
   {
     "shortcutName": "Select All",
-    "shortcutDescription": "Selects all content in the current document or window. (WORD)",
+    "shortcutDescription": "Selects all content in the document.",
     "shortcutKeys": [
       "Ctrl",
       "A"
+    ]
+  },
+  {
+    "shortcutName": "Bold",
+    "shortcutDescription": "Toggles bold formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "B"
+    ]
+  },
+  {
+    "shortcutName": "Italic",
+    "shortcutDescription": "Toggles italic formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "I"
+    ]
+  },
+  {
+    "shortcutName": "Underline",
+    "shortcutDescription": "Toggles underline formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "U"
+    ]
+  },
+  {
+    "shortcutName": "Strikethrough",
+    "shortcutDescription": "Toggles strikethrough formatting on the selected text.",
+    "shortcutKeys": [
+      "Alt",
+      "H",
+      "4"
+    ]
+  },
+  {
+    "shortcutName": "Increase Font Size",
+    "shortcutDescription": "Increases the font size of the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "."
+    ]
+  },
+  {
+    "shortcutName": "Decrease Font Size",
+    "shortcutDescription": "Decreases the font size of the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      ","
+    ]
+  },
+  {
+    "shortcutName": "Align Left",
+    "shortcutDescription": "Aligns the selected paragraph to the left.",
+    "shortcutKeys": [
+      "Ctrl",
+      "L"
+    ]
+  },
+  {
+    "shortcutName": "Align Center",
+    "shortcutDescription": "Centers the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "E"
+    ]
+  },
+  {
+    "shortcutName": "Align Right",
+    "shortcutDescription": "Aligns the selected paragraph to the right.",
+    "shortcutKeys": [
+      "Ctrl",
+      "R"
+    ]
+  },
+  {
+    "shortcutName": "Justify",
+    "shortcutDescription": "Justifies the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "J"
+    ]
+  },
+  {
+    "shortcutName": "Single Spacing",
+    "shortcutDescription": "Sets line spacing to single.",
+    "shortcutKeys": [
+      "Ctrl",
+      "1"
+    ]
+  },
+  {
+    "shortcutName": "Double Spacing",
+    "shortcutDescription": "Sets line spacing to double.",
+    "shortcutKeys": [
+      "Ctrl",
+      "2"
+    ]
+  },
+  {
+    "shortcutName": "1.5 Line Spacing",
+    "shortcutDescription": "Sets line spacing to 1.5 lines.",
+    "shortcutKeys": [
+      "Ctrl",
+      "5"
+    ]
+  },
+  {
+    "shortcutName": "Find",
+    "shortcutDescription": "Opens the Navigation pane to search the document.",
+    "shortcutKeys": [
+      "Ctrl",
+      "F"
+    ]
+  },
+  {
+    "shortcutName": "Replace",
+    "shortcutDescription": "Opens the Find and Replace dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "H"
+    ]
+  },
+  {
+    "shortcutName": "Go To",
+    "shortcutDescription": "Opens the Go To dialog to navigate to a specific page or section.",
+    "shortcutKeys": [
+      "Ctrl",
+      "G"
+    ]
+  },
+  {
+    "shortcutName": "Insert Hyperlink",
+    "shortcutDescription": "Opens the Insert Hyperlink dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "K"
+    ]
+  },
+  {
+    "shortcutName": "Insert Page Break",
+    "shortcutDescription": "Inserts a page break at the cursor position.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Enter"
+    ]
+  },
+  {
+    "shortcutName": "Insert Line Break",
+    "shortcutDescription": "Inserts a line break without starting a new paragraph.",
+    "shortcutKeys": [
+      "Shift",
+      "Enter"
+    ]
+  },
+  {
+    "shortcutName": "Spelling and Grammar Check",
+    "shortcutDescription": "Runs the spelling and grammar checker.",
+    "shortcutKeys": [
+      "F7"
+    ]
+  },
+  {
+    "shortcutName": "Thesaurus",
+    "shortcutDescription": "Opens the Thesaurus for the selected word.",
+    "shortcutKeys": [
+      "Shift",
+      "F7"
+    ]
+  },
+  {
+    "shortcutName": "Word Count",
+    "shortcutDescription": "Opens the Word Count dialog showing document statistics.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "G"
+    ]
+  },
+  {
+    "shortcutName": "Apply Heading 1",
+    "shortcutDescription": "Applies the Heading 1 style to the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "1"
+    ]
+  },
+  {
+    "shortcutName": "Apply Heading 2",
+    "shortcutDescription": "Applies the Heading 2 style to the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "2"
+    ]
+  },
+  {
+    "shortcutName": "Apply Heading 3",
+    "shortcutDescription": "Applies the Heading 3 style to the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "3"
+    ]
+  },
+  {
+    "shortcutName": "Apply Normal Style",
+    "shortcutDescription": "Applies the Normal style to the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "N"
+    ]
+  },
+  {
+    "shortcutName": "Increase Indent",
+    "shortcutDescription": "Increases the indent level of the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "M"
+    ]
+  },
+  {
+    "shortcutName": "Decrease Indent",
+    "shortcutDescription": "Decreases the indent level of the selected paragraph.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "M"
+    ]
+  },
+  {
+    "shortcutName": "Insert Comment",
+    "shortcutDescription": "Inserts a new comment at the cursor position.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "M"
+    ]
+  },
+  {
+    "shortcutName": "Insert Footnote",
+    "shortcutDescription": "Inserts a footnote at the cursor position.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "F"
+    ]
+  },
+  {
+    "shortcutName": "Insert Endnote",
+    "shortcutDescription": "Inserts an endnote at the cursor position.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "D"
+    ]
+  },
+  {
+    "shortcutName": "Toggle Show/Hide Formatting",
+    "shortcutDescription": "Shows or hides paragraph marks and formatting symbols.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "8"
+    ]
+  },
+  {
+    "shortcutName": "Open Font Dialog",
+    "shortcutDescription": "Opens the Font dialog box for detailed formatting.",
+    "shortcutKeys": [
+      "Ctrl",
+      "D"
+    ]
+  },
+  {
+    "shortcutName": "Change Case",
+    "shortcutDescription": "Cycles through text case options (UPPER, lower, Title).",
+    "shortcutKeys": [
+      "Shift",
+      "F3"
+    ]
+  },
+  {
+    "shortcutName": "Superscript",
+    "shortcutDescription": "Toggles superscript formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "="
+    ]
+  },
+  {
+    "shortcutName": "Subscript",
+    "shortcutDescription": "Toggles subscript formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "="
+    ]
+  },
+  {
+    "shortcutName": "Insert Date Field",
+    "shortcutDescription": "Inserts a date field at the cursor position.",
+    "shortcutKeys": [
+      "Alt",
+      "Shift",
+      "D"
+    ]
+  },
+  {
+    "shortcutName": "Insert Time Field",
+    "shortcutDescription": "Inserts a time field at the cursor position.",
+    "shortcutKeys": [
+      "Alt",
+      "Shift",
+      "T"
+    ]
+  },
+  {
+    "shortcutName": "Insert Page Number Field",
+    "shortcutDescription": "Inserts a page number field at the cursor position.",
+    "shortcutKeys": [
+      "Alt",
+      "Shift",
+      "P"
+    ]
+  },
+  {
+    "shortcutName": "Full Screen ON/OFF",
+    "shortcutDescription": "Toggles full screen reading view.",
+    "shortcutKeys": [
+      "F11"
+    ]
+  },
+  {
+    "shortcutName-": "Zoom In",
+    "shortcutDescription-": "Increases the zoom level of the document view.",
+    "shortcutKeys-": [
+      "Ctrl",
+      "+"
+    ]
+  },
+  {
+    "shortcutName": "Zoom Out",
+    "shortcutDescription": "Decreases the zoom level of the document view.",
+    "shortcutKeys": [
+      "Ctrl",
+      "-"
     ]
   }
 ]

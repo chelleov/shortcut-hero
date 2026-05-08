@@ -1,7 +1,55 @@
 [
   {
+    "shortcutName": "New Workbook",
+    "shortcutDescription": "Creates a new blank workbook.",
+    "shortcutKeys": [
+      "Ctrl",
+      "N"
+    ]
+  },
+  {
+    "shortcutName": "Open",
+    "shortcutDescription": "Opens an existing workbook.",
+    "shortcutKeys": [
+      "Ctrl",
+      "O"
+    ]
+  },
+  {
+    "shortcutName": "Save",
+    "shortcutDescription": "Saves the current workbook.",
+    "shortcutKeys": [
+      "Ctrl",
+      "S"
+    ]
+  },
+  {
+    "shortcutName": "Save As",
+    "shortcutDescription": "Opens the Save As dialog to save with a new name or location.",
+    "shortcutKeys": [
+      "F12"
+    ]
+  },
+  {
+    "shortcutName": "Close Workbook",
+    "shortcutDescription": "Closes the current workbook.",
+    "shortcutKeys": [
+      "Ctrl",
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Add New Sheet",
+    "shortcutDescription": "Inserts a new worksheet.",
+    "shortcutKeys": [
+      "Shift",
+      "Alt",
+      "F1"
+    ]
+  },
+  {
     "shortcutName": "Copy",
-    "shortcutDescription": "Copies the selected item to the clipboard (EXCEL).",
+    "shortcutDescription": "Copies the selected cells to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "C"
@@ -9,43 +57,321 @@
   },
   {
     "shortcutName": "Paste",
-    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location (EXCEL).",
+    "shortcutDescription": "Pastes the contents of the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "V"
     ]
   },
   {
+    "shortcutName": "Paste to the Right",
+    "shortcutDescription": "Pastes content to the cell on the right.",
+    "shortcutKeys": [
+      "Ctrl",
+      "R"
+    ]
+  },
+  {
+    "shortcutName": "Paste Down",
+    "shortcutDescription": "Pastes content to the cell below.",
+    "shortcutKeys": [
+      "Ctrl",
+      "D"
+    ]
+  },
+  {
     "shortcutName": "Cut",
-    "shortcutDescription": "Cuts the selected item and moves it to the clipboard (EXCEL).",
+    "shortcutDescription": "Cuts the selected cells and moves them to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "X"
     ]
   },
   {
-    "shortcutName": "Undo",
-    "shortcutDescription": "Reverses the last action performed (EXCEL).",
+    "shortcutName": "Duplicate",
+    "shortcutDescription": "Duplicates the selected content.",
+    "shortcutKeys": [
+      "Ctrl",
+      "D"
+    ]
+  },
+  {
+    "shortcutName": "Delete Selection",
+    "shortcutDescription": "Deletes the selected cells or content.",
+    "shortcutKeys": [
+      "Ctrl",
+      "-"
+    ]
+  },
+  {
+    "shortcutName-": "Insert Cells/Rows/Columns",
+    "shortcutDescription-": "Opens the Insert dialog for cells, rows, or columns.",
+    "shortcutKeys-": [
+      "Ctrl",
+      "+"
+    ]
+  },
+  {
+    "shortcutName": "Cancel",
+    "shortcutDescription": "Cancels the current operation or entry.",
     "shortcutKeys": [
       "Ctrl",
       "Z"
     ]
   },
   {
-    "shortcutName": "Save",
-    "shortcutDescription": "Saves the current document or file (EXCEL).",
+    "shortcutName": "Cancel Cancellation",
+    "shortcutDescription": "Redoes the last undone action.",
     "shortcutKeys": [
       "Ctrl",
-      "S"
-    ],
-    "isOrderImportant": false
+      "Y"
+    ]
+  },
+  {
+    "shortcutName": "Repeat Last Action",
+    "shortcutDescription": "Repeats the last action performed.",
+    "shortcutKeys": [
+      "F4"
+    ]
+  },
+  {
+    "shortcutName": "Insert Current Date",
+    "shortcutDescription": "Inserts today's date into the active cell.",
+    "shortcutKeys": [
+      "Ctrl",
+      ";"
+    ]
+  },
+  {
+    "shortcutName": "Insert Current Time",
+    "shortcutDescription": "Inserts the current time into the active cell.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      ";"
+    ]
+  },
+  {
+    "shortcutName": "Bold",
+    "shortcutDescription": "Toggles bold formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "B"
+    ]
+  },
+  {
+    "shortcutName": "Underline",
+    "shortcutDescription": "Toggles underline formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "U"
+    ]
+  },
+  {
+    "shortcutName": "Italic",
+    "shortcutDescription": "Toggles italic formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "I"
+    ]
+  },
+  {
+    "shortcutName": "Format as Percentage",
+    "shortcutDescription": "Applies percentage formatting to the selected cells.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "5"
+    ]
+  },
+  {
+    "shortcutName": "Open Format Dialog Box",
+    "shortcutDescription": "Opens the Format Cells dialog box.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "F"
+    ]
   },
   {
     "shortcutName": "Select All",
-    "shortcutDescription": "Selects all content in the current document or window (EXCEL).",
+    "shortcutDescription": "Selects all cells in the worksheet.",
     "shortcutKeys": [
       "Ctrl",
       "A"
+    ]
+  },
+  {
+    "shortcutName": "Activation Selection Mode",
+    "shortcutDescription": "Activates the Extend Selection mode.",
+    "shortcutKeys": [
+      "F8"
+    ]
+  },
+  {
+    "shortcutName": "Select Current Row",
+    "shortcutDescription": "Selects the entire current row.",
+    "shortcutKeys": [
+      "Shift",
+      "Space"
+    ]
+  },
+  {
+    "shortcutName": "Select Current Column",
+    "shortcutDescription": "Selects the entire current column.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Space"
+    ]
+  },
+  {
+    "shortcutName": "Hide Active Row",
+    "shortcutDescription": "Hides the currently selected row.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "9"
+    ]
+  },
+  {
+    "shortcutName": "Edit Active Cell",
+    "shortcutDescription": "Enters edit mode for the active cell.",
+    "shortcutKeys": [
+      "F2"
+    ]
+  },
+  {
+    "shortcutName": "View and Insert Named Ranges",
+    "shortcutDescription": "Opens the Name Manager to view and insert named ranges.",
+    "shortcutKeys": [
+      "F3"
+    ]
+  },
+  {
+    "shortcutName": "Validate Suggested Formula",
+    "shortcutDescription": "Accepts the suggested formula or autocomplete.",
+    "shortcutKeys": [
+      "Tab"
+    ]
+  },
+  {
+    "shortcutName": "Add Line Break in Formula",
+    "shortcutDescription": "Adds a line break within a formula in the formula bar.",
+    "shortcutKeys": [
+      "Alt",
+      "Enter"
+    ]
+  },
+  {
+    "shortcutName": "Sum All Cells Above",
+    "shortcutDescription": "Inserts an AutoSum formula for the cells above.",
+    "shortcutKeys": [
+      "Alt",
+      "="
+    ]
+  },
+  {
+    "shortcutName": "Expand Formula Bar",
+    "shortcutDescription": "Expands or collapses the formula bar.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "U"
+    ]
+  },
+  {
+    "shortcutName": "Flash Fill",
+    "shortcutDescription": "Automatically fills the selected range based on a pattern.",
+    "shortcutKeys": [
+      "Ctrl",
+      "E"
+    ]
+  },
+  {
+    "shortcutName": "Find",
+    "shortcutDescription": "Opens the Find dialog to search for content.",
+    "shortcutKeys": [
+      "Ctrl",
+      "F"
+    ]
+  },
+  {
+    "shortcutName": "Replace",
+    "shortcutDescription": "Opens the Find and Replace dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "H"
+    ]
+  },
+  {
+    "shortcutName": "Delete 1 Character to the Left",
+    "shortcutDescription": "Deletes one character to the left of the cursor.",
+    "shortcutKeys": [
+      "Backspace"
+    ]
+  },
+  {
+    "shortcutName": "Delete 1 Word to the Left",
+    "shortcutDescription": "Deletes one word to the left of the cursor.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Backspace"
+    ]
+  },
+  {
+    "shortcutName": "Spelling and Grammar Check",
+    "shortcutDescription": "Runs the spelling and grammar checker.",
+    "shortcutKeys": [
+      "F7"
+    ]
+  },
+  {
+    "shortcutName": "Add/Remove Filter",
+    "shortcutDescription": "Toggles the AutoFilter on or off for the selected data.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "L"
+    ]
+  },
+  {
+    "shortcutName": "Insert Table",
+    "shortcutDescription": "Opens the Create Table dialog.",
+    "shortcutKeys": [
+      "Alt",
+      "N"
+    ]
+  },
+  {
+    "shortcutName": "Open New Tab",
+    "shortcutDescription": "Opens a new tab in the current application.",
+    "shortcutKeys": [
+      "Ctrl",
+      "T"
+    ]
+  },
+  {
+    "shortcutName": "Close Current Tab",
+    "shortcutDescription": "Closes the current tab.",
+    "shortcutKeys": [
+      "Ctrl",
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Restore Last Closed Tab",
+    "shortcutDescription": "Reopens the last closed tab.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "T"
+    ]
+  },
+  {
+    "shortcutName": "Full Screen ON/OFF",
+    "shortcutDescription": "Toggles full screen mode on or off.",
+    "shortcutKeys": [
+      "F11"
     ]
   }
 ]

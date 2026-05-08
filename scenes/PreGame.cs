@@ -4,10 +4,15 @@ using System;
 public partial class PreGame : Control
 {
 	private GameState _gameState;
+	private Label _prepareMessage;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_gameState = GetNode<GameState>("/root/GameState");
+		_prepareMessage = GetNode<Label>("CenterContainer/VBox/Prepare Message");
+		_prepareMessage.Text = "";
+
 		if (!_gameState.IsGameStarted)
 		{
 			_gameState.IsGameStarted = true;

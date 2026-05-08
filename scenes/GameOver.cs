@@ -47,4 +47,26 @@ public partial class GameOver : Control
 	public override void _Process(double delta)
 	{
 	}
+
+	private void ResetGameState()
+	{
+		_gameState.IsGameStarted = false;
+		_gameState.Score = 0;
+		_gameState.Round = 1;
+		_gameState.DifficultyLevel = 1;
+		_gameState.TimeLimit = 10.0f;
+		_gameState.TimeAddition = 0.5f;
+	}
+
+	private void OnPlayAgainPressed()
+	{
+		ResetGameState();
+		GetTree().ChangeSceneToFile("res://scenes/pre_game.tscn");
+	}
+
+	private void OnMainMenuPressed()
+	{
+		ResetGameState();
+		GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+	}
 }

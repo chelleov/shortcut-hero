@@ -1,7 +1,54 @@
 [
   {
+    "shortcutName": "New Presentation",
+    "shortcutDescription": "Creates a new blank presentation.",
+    "shortcutKeys": [
+      "Ctrl",
+      "N"
+    ]
+  },
+  {
+    "shortcutName": "Open",
+    "shortcutDescription": "Opens an existing presentation.",
+    "shortcutKeys": [
+      "Ctrl",
+      "O"
+    ]
+  },
+  {
+    "shortcutName": "Save",
+    "shortcutDescription": "Saves the current presentation.",
+    "shortcutKeys": [
+      "Ctrl",
+      "S"
+    ]
+  },
+  {
+    "shortcutName": "Save As",
+    "shortcutDescription": "Opens the Save As dialog.",
+    "shortcutKeys": [
+      "F12"
+    ]
+  },
+  {
+    "shortcutName": "Close Presentation",
+    "shortcutDescription": "Closes the current presentation.",
+    "shortcutKeys": [
+      "Ctrl",
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Print",
+    "shortcutDescription": "Opens the Print dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "P"
+    ]
+  },
+  {
     "shortcutName": "Copy",
-    "shortcutDescription": "Copies the selected item to the clipboard. (POWERPOINT)",
+    "shortcutDescription": "Copies the selected object or text to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "C"
@@ -9,7 +56,7 @@
   },
   {
     "shortcutName": "Paste",
-    "shortcutDescription": "Pastes the contents of the clipboard at the cursor location. (POWERPOINT)",
+    "shortcutDescription": "Pastes the contents of the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "V"
@@ -17,7 +64,7 @@
   },
   {
     "shortcutName": "Cut",
-    "shortcutDescription": "Cuts the selected item and moves it to the clipboard. (POWERPOINT)",
+    "shortcutDescription": "Cuts the selected object or text to the clipboard.",
     "shortcutKeys": [
       "Ctrl",
       "X"
@@ -25,27 +72,332 @@
   },
   {
     "shortcutName": "Undo",
-    "shortcutDescription": "Reverses the last action performed. (POWERPOINT)",
+    "shortcutDescription": "Reverses the last action performed.",
     "shortcutKeys": [
       "Ctrl",
       "Z"
     ]
   },
   {
-    "shortcutName": "Save",
-    "shortcutDescription": "Saves the current document or file. (POWERPOINT)",
+    "shortcutName": "Redo",
+    "shortcutDescription": "Redoes the last undone action.",
     "shortcutKeys": [
       "Ctrl",
-      "S"
-    ],
-    "isOrderImportant": false
+      "Y"
+    ]
+  },
+  {
+    "shortcutName": "Duplicate",
+    "shortcutDescription": "Duplicates the selected slide or object.",
+    "shortcutKeys": [
+      "Ctrl",
+      "D"
+    ]
   },
   {
     "shortcutName": "Select All",
-    "shortcutDescription": "Selects all content in the current document or window. (POWERPOINT)",
+    "shortcutDescription": "Selects all objects on the current slide.",
     "shortcutKeys": [
       "Ctrl",
       "A"
+    ]
+  },
+  {
+    "shortcutName": "New Slide",
+    "shortcutDescription": "Inserts a new slide after the current one.",
+    "shortcutKeys": [
+      "Ctrl",
+      "M"
+    ]
+  },
+  {
+    "shortcutName": "Bold",
+    "shortcutDescription": "Toggles bold formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "B"
+    ]
+  },
+  {
+    "shortcutName": "Italic",
+    "shortcutDescription": "Toggles italic formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "I"
+    ]
+  },
+  {
+    "shortcutName": "Underline",
+    "shortcutDescription": "Toggles underline formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "U"
+    ]
+  },
+  {
+    "shortcutName": "Increase Font Size",
+    "shortcutDescription": "Increases the font size of the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "."
+    ]
+  },
+  {
+    "shortcutName": "Decrease Font Size",
+    "shortcutDescription": "Decreases the font size of the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      ","
+    ]
+  },
+  {
+    "shortcutName": "Align Left",
+    "shortcutDescription": "Aligns the selected text to the left.",
+    "shortcutKeys": [
+      "Ctrl",
+      "L"
+    ]
+  },
+  {
+    "shortcutName": "Align Center",
+    "shortcutDescription": "Centers the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "E"
+    ]
+  },
+  {
+    "shortcutName": "Align Right",
+    "shortcutDescription": "Aligns the selected text to the right.",
+    "shortcutKeys": [
+      "Ctrl",
+      "R"
+    ]
+  },
+  {
+    "shortcutName": "Justify",
+    "shortcutDescription": "Justifies the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "J"
+    ]
+  },
+  {
+    "shortcutName": "Start Slideshow from Beginning",
+    "shortcutDescription": "Starts the slideshow from the first slide.",
+    "shortcutKeys": [
+      "F5"
+    ]
+  },
+  {
+    "shortcutName": "Start Slideshow from Current Slide",
+    "shortcutDescription": "Starts the slideshow from the currently selected slide.",
+    "shortcutKeys": [
+      "Shift",
+      "F5"
+    ]
+  },
+  {
+    "shortcutName": "End Slideshow",
+    "shortcutDescription": "Ends the current slideshow presentation.",
+    "shortcutKeys": [
+      "Escape"
+    ]
+  },
+  {
+    "shortcutName": "Black Screen During Slideshow",
+    "shortcutDescription": "Toggles a black screen during a slideshow presentation.",
+    "shortcutKeys": [
+      "B"
+    ]
+  },
+  {
+    "shortcutName": "White Screen During Slideshow",
+    "shortcutDescription": "Toggles a white screen during a slideshow presentation.",
+    "shortcutKeys": [
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Find",
+    "shortcutDescription": "Opens the Find dialog to search for text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "F"
+    ]
+  },
+  {
+    "shortcutName": "Replace",
+    "shortcutDescription": "Opens the Find and Replace dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "H"
+    ]
+  },
+  {
+    "shortcutName": "Insert Hyperlink",
+    "shortcutDescription": "Opens the Insert Hyperlink dialog.",
+    "shortcutKeys": [
+      "Ctrl",
+      "K"
+    ]
+  },
+  {
+    "shortcutName": "Group Objects",
+    "shortcutDescription": "Groups the selected objects together.",
+    "shortcutKeys": [
+      "Ctrl",
+      "G"
+    ]
+  },
+  {
+    "shortcutName": "Ungroup Objects",
+    "shortcutDescription": "Ungroups the selected grouped objects.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "G"
+    ]
+  },
+  {
+    "shortcutName": "Insert Comment",
+    "shortcutDescription": "Inserts a new comment on the selected object or text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Alt",
+      "M"
+    ]
+  },
+  {
+    "shortcutName": "Open Font Dialog",
+    "shortcutDescription": "Opens the Font dialog box for detailed text formatting.",
+    "shortcutKeys": [
+      "Ctrl",
+      "T"
+    ]
+  },
+  {
+    "shortcutName": "Superscript",
+    "shortcutDescription": "Toggles superscript formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "="
+    ]
+  },
+  {
+    "shortcutName": "Subscript",
+    "shortcutDescription": "Toggles subscript formatting on the selected text.",
+    "shortcutKeys": [
+      "Ctrl",
+      "="
+    ]
+  },
+  {
+    "shortcutName": "Change Case",
+    "shortcutDescription": "Cycles through text case options (UPPER, lower, Title).",
+    "shortcutKeys": [
+      "Shift",
+      "F3"
+    ]
+  },
+  {
+    "shortcutName": "Bring to Front",
+    "shortcutDescription": "Moves the selected object to the front of all other objects.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "F"
+    ]
+  },
+  {
+    "shortcutName": "Send to Back",
+    "shortcutDescription": "Moves the selected object behind all other objects.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "B"
+    ]
+  },
+  {
+    "shortcutName": "Delete Slide",
+    "shortcutDescription": "Deletes the currently selected slide.",
+    "shortcutKeys": [
+      "Delete"
+    ]
+  },
+  {
+    "shortcutName": "Zoom In",
+    "shortcutDescription": "Increases the zoom level of the slide view.",
+    "shortcutKeys": [
+      "Ctrl",
+      "+"
+    ]
+  },
+  {
+    "shortcutName": "Zoom Out",
+    "shortcutDescription": "Decreases the zoom level of the slide view.",
+    "shortcutKeys": [
+      "Ctrl",
+      "-"
+    ]
+  },
+  {
+    "shortcutName": "Fit Slide to Window",
+    "shortcutDescription": "Adjusts zoom so the slide fits the current window.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Shift",
+      "W"
+    ]
+  },
+  {
+    "shortcutName": "Toggle Grid",
+    "shortcutDescription": "Shows or hides the grid lines on the slide.",
+    "shortcutKeys": [
+      "Shift",
+      "F9"
+    ]
+  },
+  {
+    "shortcutName": "Toggle Guides",
+    "shortcutDescription": "Shows or hides the drawing guides on the slide.",
+    "shortcutKeys": [
+      "Alt",
+      "F9"
+    ]
+  },
+  {
+    "shortcutName": "Spelling Check",
+    "shortcutDescription": "Runs the spelling checker on the presentation.",
+    "shortcutKeys": [
+      "F7"
+    ]
+  },
+  {
+    "shortcutName": "Open Selection Pane",
+    "shortcutDescription": "Opens the Selection Pane to manage objects on the slide.",
+    "shortcutKeys": [
+      "Alt",
+      "F10"
+    ]
+  },
+  {
+    "shortcutName": "Move Slide Up",
+    "shortcutDescription": "Moves the selected slide up in the slide panel.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Up"
+    ]
+  },
+  {
+    "shortcutName": "Move Slide Down",
+    "shortcutDescription": "Moves the selected slide down in the slide panel.",
+    "shortcutKeys": [
+      "Ctrl",
+      "Down"
     ]
   }
 ]
