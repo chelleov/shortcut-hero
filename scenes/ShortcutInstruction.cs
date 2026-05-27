@@ -24,11 +24,23 @@ public partial class ShortcutInstruction : PanelContainer
 
 	public void SetInstructionsVisible(Boolean visible)
 	{
+		var gameState = GetNode<GameState>("/root/GameState");
 		if (_shortcutName.LabelSettings == null)
 		{
 			_shortcutName.LabelSettings = new LabelSettings();
 		}
-		_shortcutName.LabelSettings.FontColor = visible ? Colors.White : Colors.Gray;
+		if (visible)
+		{
+			_shortcutName.LabelSettings.FontColor = gameState.IsDarkMode
+				? Colors.White
+				: new Color(0.1f, 0.1f, 0.15f, 1f);
+		}
+		else
+		{
+			_shortcutName.LabelSettings.FontColor = gameState.IsDarkMode
+				? Colors.Gray
+				: new Color(0.45f, 0.5f, 0.55f, 1f); // Darker grey for light mode readability
+		}
 		_shortcutDescription.Visible = visible;
 		_shortcutKeys.Visible = visible;
 		_emptySpace.Visible = !visible;

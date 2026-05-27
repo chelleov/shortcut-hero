@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://jxvd7g1pr801" path="res://scenes/MainMenu.cs" id="1_l6cm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
-bg_color = Color(0.12, 0.56, 0.98, 1)
+bg_color = Color(0.25, 0.55, 0.80, 1)
 border_width_left = 0
 border_width_top = 0
 border_width_right = 0
@@ -18,7 +18,7 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
-bg_color = Color(0.22, 0.64, 1.0, 1)
+bg_color = Color(0.35, 0.62, 0.85, 1)
 border_width_left = 0
 border_width_top = 0
 border_width_right = 0
@@ -33,7 +33,7 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
-bg_color = Color(0.08, 0.44, 0.82, 1)
+bg_color = Color(0.18, 0.45, 0.72, 1)
 border_width_left = 0
 border_width_top = 0
 border_width_right = 0
@@ -48,12 +48,12 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_normal"]
-bg_color = Color(0.18, 0.22, 0.30, 1)
+bg_color = Color(0.25, 0.55, 0.80, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.35, 0.40, 0.50, 1)
+border_color = Color(0.20, 0.40, 0.60, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -64,12 +64,12 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_hover"]
-bg_color = Color(0.25, 0.28, 0.36, 1)
+bg_color = Color(0.35, 0.62, 0.85, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.45, 0.50, 0.60, 1)
+border_color = Color(0.28, 0.48, 0.68, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -80,12 +80,12 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_pressed"]
-bg_color = Color(0.14, 0.16, 0.22, 1)
+bg_color = Color(0.18, 0.45, 0.72, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.35, 0.40, 0.50, 1)
+border_color = Color(0.20, 0.40, 0.60, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -96,12 +96,12 @@ content_margin_right = 24.0
 content_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fold_normal"]
-bg_color = Color(0.12, 0.18, 0.28, 1)
+bg_color = Color(0.08, 0.15, 0.25, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.2, 0.4, 0.65, 1)
+border_color = Color(0.25, 0.50, 0.75, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8

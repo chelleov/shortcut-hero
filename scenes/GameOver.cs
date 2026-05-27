@@ -11,6 +11,12 @@ public partial class GameOver : Control
 		_scoreList = GetNode<Tree>("VBox/Score List");
 		_gameState = GetNode<GameState>("/root/GameState");
 
+		// Play game over sound
+		var gameOverSound = new AudioStreamPlayer();
+		gameOverSound.Stream = GD.Load<AudioStream>("res://audio/GAME OVER 1.mp3");
+		AddChild(gameOverSound);
+		gameOverSound.Play();
+
 		_scoreList.Clear();
 
 		_scoreList.HideRoot = true;

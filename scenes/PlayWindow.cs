@@ -109,6 +109,10 @@ public partial class PlayWindow : Control
             }
             else
             {
+                if (sequenceMatches)
+                {
+                    _gameState.PlayFailSound();
+                }
                 sequenceMatches = false; // Once the sequence is broken, remaining keys are marked red
                 formattedKeys.Add($"[color=red]{key}[/color]");
             }
@@ -120,6 +124,7 @@ public partial class PlayWindow : Control
         if (sequenceMatches && _pressedKeys.Count == currentShortcut.Keys.Count)
         {
             GD.Print($"Match found for {currentShortcut.Name}! Loading next...");
+            _gameState.PlaySuccessSound();
             // CallDeferred is used to ensure the state change happens safely
             CallDeferred(MethodName.LoadNewShortcut);
             _scorePanel.AddScore((int)_gameOverProgress.Value);

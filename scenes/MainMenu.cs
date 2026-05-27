@@ -38,6 +38,22 @@ public partial class MainMenu : Control
 			_gameModeList.Visible = true;
 		}
 		_gameMode.Title = Path.GetFileNameWithoutExtension(jsonFiles[0]);
+
+		var themeContainer = new HBoxContainer();
+		themeContainer.Alignment = BoxContainer.AlignmentMode.Center;
+		themeContainer.SizeFlagsHorizontal = Control.SizeFlags.ShrinkCenter;
+
+		var themeToggle = new CheckButton
+		{
+			Text = _gameState.IsDarkMode ? "Dark Mode" : "Light Mode",
+			ButtonPressed = _gameState.IsDarkMode
+		};
+		themeToggle.Toggled += (bool toggled) => {
+			_gameState.ToggleTheme();
+			themeToggle.Text = toggled ? "Dark Mode" : "Light Mode";
+		};
+		themeContainer.AddChild(themeToggle);
+		GetNode<VBoxContainer>("VBoxContainer").AddChild(themeContainer);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
