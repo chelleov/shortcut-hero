@@ -135,24 +135,6 @@
     ]
   },
   {
-    "shortcutName": "Increase Font Size",
-    "shortcutDescription": "Increases the font size of the selected text.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "."
-    ]
-  },
-  {
-    "shortcutName": "Decrease Font Size",
-    "shortcutDescription": "Decreases the font size of the selected text.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      ","
-    ]
-  },
-  {
     "shortcutName": "Align Left",
     "shortcutDescription": "Aligns the selected text to the left.",
     "shortcutKeys": [
@@ -253,38 +235,11 @@
     ]
   },
   {
-    "shortcutName": "Ungroup Objects",
-    "shortcutDescription": "Ungroups the selected grouped objects.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "G"
-    ]
-  },
-  {
-    "shortcutName": "Insert Comment",
-    "shortcutDescription": "Inserts a new comment on the selected object or text.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Alt",
-      "M"
-    ]
-  },
-  {
     "shortcutName": "Open Font Dialog",
     "shortcutDescription": "Opens the Font dialog box for detailed text formatting.",
     "shortcutKeys": [
       "Ctrl",
       "T"
-    ]
-  },
-  {
-    "shortcutName": "Superscript",
-    "shortcutDescription": "Toggles superscript formatting on the selected text.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "="
     ]
   },
   {
@@ -301,24 +256,6 @@
     "shortcutKeys": [
       "Shift",
       "F3"
-    ]
-  },
-  {
-    "shortcutName": "Bring to Front",
-    "shortcutDescription": "Moves the selected object to the front of all other objects.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "F"
-    ]
-  },
-  {
-    "shortcutName": "Send to Back",
-    "shortcutDescription": "Moves the selected object behind all other objects.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "B"
     ]
   },
   {
@@ -342,15 +279,6 @@
     "shortcutKeys": [
       "Ctrl",
       "-"
-    ]
-  },
-  {
-    "shortcutName": "Fit Slide to Window",
-    "shortcutDescription": "Adjusts zoom so the slide fits the current window.",
-    "shortcutKeys": [
-      "Ctrl",
-      "Shift",
-      "W"
     ]
   },
   {
